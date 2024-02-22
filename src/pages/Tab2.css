@@ -1,0 +1,51 @@
+.reservas{
+    text-align: center;
+}
+.foto{
+    margin-top: 25px;
+   width: 300px;
+   border-radius: 20px;
+}
+.blogs{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    align-content: center;
+    flex-wrap: wrap;
+
+}
+.atoxoblog{
+    display: flex;
+    justify-content: center;
+    font-size: 14px;
+    margin: 20px 0px 20px;
+    text-decoration: none;
+    color: yellowgreen;
+    text-align: center;
+}
+.pcomida{
+    text-align: center;
+
+}
+.comida{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.botoncomida{
+    width: 159px;
+    height: 50px;
+    margin: 0px 0px 25px;
+    border-radius: 35px;
+    font-size: 18px;
+    background-color: white;
+    color: black;
+    font-family: sans-serif;
+    
+}
+.blogscomida{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}

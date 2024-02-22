@@ -1,65 +1,80 @@
 import React, { useState } from 'react';
-import { IonContent, IonHeader, IonPage, IonTitle, IonToolbar, IonFab, IonFabButton, IonIcon, IonGrid, IonRow, IonCol, IonImg, IonActionSheet } from '@ionic/react';
-import { camera, trash, close } from 'ionicons/icons';
-import { usePhotoGallery, UserPhoto } from '../hooks/usePhotoGallery';
+import { IonContent, IonHeader, IonPage, IonTitle, IonToolbar, IonFab, IonFabButton, IonIcon, IonGrid, IonRow, IonCol, IonImg, IonActionSheet, IonButtons, IonMenuButton } from '@ionic/react';
+import './Tab2.css';
+import Mimenu from '../components/menu';
 
 const Tab2: React.FC = () => {
-  const { deletePhoto, photos, takePhoto } = usePhotoGallery();
-  const [photoToDelete, setPhotoToDelete] = useState<UserPhoto>();
+    return (
+        <div>
+            <Mimenu></Mimenu>
+            <IonPage id="main-content">
+                <IonHeader>
+                    <IonToolbar>
+                        <IonButtons slot="start">
+                            <IonMenuButton></IonMenuButton>
+                        </IonButtons>
+                        <IonTitle>Recetas</IonTitle>
+                    </IonToolbar>
+                </IonHeader>
+                <IonContent fullscreen className="ion-padding">
+                    <div className="containerten " id="containerten">
+                        <div className='reservas'>
+                            <h2 className="reservas">Recetas Saludables</h2>
+                        </div>
+                        <div className="blogs">
+                            <div className="blogone">
+                                <div className="blogscomida">
+                                    <div>
+                                        <img className='foto' src='public\esparragos.JPG'></img>
+                                    </div>
 
-  return (
-    <IonPage>
-      <IonHeader>
-        <IonToolbar>
-          <IonTitle>Photo Gallery</IonTitle>
-        </IonToolbar>
-      </IonHeader>
-      <IonContent>
-      <IonHeader collapse="condense">
-          <IonToolbar>
-            <IonTitle size="large">Photo Gallery</IonTitle>
-          </IonToolbar>
-        </IonHeader>
-        <IonGrid>
-          <IonRow>
-            {photos.map((photo, index) => (
-              <IonCol size="6" key={index}>
-                <IonImg onClick={() => setPhotoToDelete(photo)} src={photo.webviewPath} />
-              </IonCol>
-            ))}
-          </IonRow>
-        </IonGrid>
+                                    <div className="comida">
+                                        <a className="atoxoblog" href="#"><strong>ESPÁRRAGOS REVUELTOS EN PAN TOSTADO</strong></a>
+                                        <p className="pcomida">¿No sabes qué cenar? ¿Deseas comer algo sencillo? Te muestro esta receta tan sencilla y buenísima para comerlo por la noche!</p>
+                                        <button className='botoncomida'>Más información</button>
+                                    </div>
 
-        <IonFab vertical="bottom" horizontal="center" slot="fixed">
-          <IonFabButton onClick={() => takePhoto()}>
-            <IonIcon icon={camera}></IonIcon>
-          </IonFabButton>
-        </IonFab>
+                                </div>
+                            </div>
+                            <div className="blogs">
+                                <div className="blogscomida">
+                                    <div className=''>
+                                        <img className="foto" src="public\pesto.jpg"></img>
+                                    </div>
 
-        <IonActionSheet
-          isOpen={!!photoToDelete}
-          buttons={[{
-            text: 'Delete',
-            role: 'destructive',
-            icon: trash,
-            handler: () => {
-              if (photoToDelete) {
-                deletePhoto(photoToDelete);
-                setPhotoToDelete(undefined);
-              }
-            }
-          }, {
-            text: 'Cancel',
-            icon: close,
-            role: 'cancel'
-          }]}
-          onDidDismiss={() => setPhotoToDelete(undefined)}
-        />
+                                    <div className="comida">
+                                        <a className="atoxoblog" href="#"><strong>TIBURONES CON PESTO</strong></a>
+                                        <p className="pcomida pestopesto">¿Te gusta la salsa de pesto? ¿Te prohíbe porque no lo considera saludable? Por supuesto, que lo es, prueba esta receta y la disfrutarás!</p>
+                                        <button className='botoncomida'>Más información</button>
+                                    </div>
+
+                                </div>
+                            </div>
+
+                            <div className="blogs">
+                                <div className="blogscomida">
+                                    <div className=''>
+                                        <img className="foto" src="public\gazpacho-de-remolacha_0.jpg"></img>
+                                    </div>
+
+                                    <div className="comida">
+                                        <a className="atoxoblog" href="#"><strong>GAZPACHO DE REMOLACHA</strong></a>
+                                        <p className="pcomida remolacharemolacha">Una buena receta y fresca con caballa y huevo picado para el verano.</p>
+                                        <button className='botoncomida'>Más información</button>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
 
 
-      </IonContent>
-    </IonPage>
-  );
+
+                </IonContent>
+            </IonPage>
+        </div>
+
+    );
 };
 
 export default Tab2;

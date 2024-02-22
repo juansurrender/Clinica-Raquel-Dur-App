@@ -1,0 +1,37 @@
+.blogone{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.inata{
+    width: 300px;
+    border-radius: 25px;
+    margin-top: 35px;
+}
+.pblog{
+    font-size: 20px;
+    margin-top: -5px;
+}
+.toxoblog{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.botonblog{
+    font-family: sans-serif;
+    font-size: 18px;
+    margin-top: 0px;
+    width: 150px;
+    height: 50px;
+    border-radius: 25px;
+    margin-bottom: 15px;
+    background-color: grey;
+    color: black;
+    
+}
+.atoxoblog{
+   font-size: 25px;
+    margin: 20px 0px 20px;
+    text-decoration: none;
+    color: yellowgreen;
+}
