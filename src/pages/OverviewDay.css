@@ -10,12 +10,19 @@
 }
 .firstcolumn{
     margin-top: 100px;
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: space-evenly;
 }
 
 .secondcolumn{
-    margin-top: 30px;
-    margin-left: 50px;
-    margin-bottom: 30px;
+    display: flex;
+    justify-content: space-evenly;
+    margin-bottom: 20px;
+}
+.thirdcolumn{
+    display: flex;
+    justify-content: space-evenly;
 }
 
 .butoncita{
@@ -39,4 +46,8 @@ background-color: red;
 }
 .disponible{
 background-color: green;
+}
+.citas{
+    display: flex;
+    justify-content: space-evenly;
 }

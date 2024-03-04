@@ -36,7 +36,6 @@ import '@ionic/react/css/display.css';
 import './theme/variables.css';
 import Login from './pages/Login';
 import Register from './pages/Register';
-import Calendar from './pages/Calendar';
 import ConfirmacionReserva from './pages/ConfirmacionReserva';
 import OverviewDay from './pages/OverviewDay';
 import OverviewMonth from './pages/OverviewMonth';
@@ -60,9 +59,6 @@ const App: React.FC = () => (
         </Route>
         <Route path="/tab3">
           <Tab3 />
-        </Route>
-        <Route path="/calendar">
-          <Calendar />
         </Route>
         <Route path="/confirmacionreserva">
           <ConfirmacionReserva />

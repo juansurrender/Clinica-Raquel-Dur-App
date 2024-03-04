@@ -7,6 +7,12 @@ import ExploreContainer from '../components/ExploreContainer';
 
 function Mimenu() {
     const history = useHistory();
+    // const handleLogout = () => {
+    //     // Aquí deberías realizar cualquier lógica necesaria para cerrar la sesión del usuario, como limpiar la sesión, eliminar tokens, etc.
+        
+    //     // Después de realizar la lógica de logout, redirecciona a la pantalla de inicio de sesión
+    //     history.push('/login');
+    // };
     const RutasDeComponente = [
         {
             ruta: '/login',
@@ -29,8 +35,8 @@ function Mimenu() {
             nombre: 'Tab3'
         },
         {
-            ruta: '/calendar',
-            nombre: 'Calendar'
+            ruta: '/overviewmonth',
+            nombre: 'Overview Month'
         },
 
         {   
@@ -57,6 +63,8 @@ function Mimenu() {
                             history.push(entry.ruta);
                         }}>{entry.nombre}</button>
                     })}
+                     {/* Botón de Logout
+                     <button className='butonlogout' onClick={handleLogout}>Logout</button> */}
                 </IonContent>
             </IonMenu>
 

@@ -20,18 +20,21 @@ td{
 .botonmonthright{
     width: 150px;
     height: 50px;
-    margin-left: 25px;
     border-radius: 500px;
+    font-size: 20px;
 }
 .botonmonthleft{
  
-
+    font-size: 20px;
     width: 150px;
     height: 50px;
-    margin-right: 25px;
     border-radius: 500px;
 }
 table{
     width: 350px;
     height: 304px;
+}
+.botones{
+display: flex;
+justify-content: space-around;
 }

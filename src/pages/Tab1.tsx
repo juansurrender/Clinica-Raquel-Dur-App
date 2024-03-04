@@ -19,7 +19,7 @@ const Tab1: React.FC = () => {
         <IonContent fullscreen className="ion-padding">
           <div className='presentaicíon'>
             <div className='container doble'>
-              <img className='adolf' src='public\Captura.JPG' alt="" />
+              <img className='adolf' src='public\raquelquiensoy.JPG' alt="" />
               <div className='elementoclinica'>
                 <h1 className="clinica" >
                   Clínica Raquel Dura
